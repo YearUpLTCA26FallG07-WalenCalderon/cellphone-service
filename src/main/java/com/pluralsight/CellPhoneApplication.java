@@ -4,6 +4,11 @@ package com.pluralsight;
 public class CellPhoneApplication {
     public static void main(String[] args) {
         CellPhone cp1 = new CellPhone();
+        CellPhone cp2 = new CellPhone();
+
+        cp2.setOwner("Erick");
+
+
 
         System.out.println("Enter your cellphone information:");
 
@@ -28,5 +33,7 @@ public class CellPhoneApplication {
         System.out.println("Carrier: " + cp1.getCarrier());
         System.out.println("Phone Number: " + cp1.getPhoneNumber());
         System.out.println("Owner: " + cp1.getOwner());
+
+        cp1.dial("532-486-5932");
     }
 }
