@@ -7,6 +7,8 @@ public class CellPhoneApplication {
         CellPhone cp2 = new CellPhone();
 
         cp2.setOwner("Erick");
+        cp2.setPhoneNumber("532-486-5932");
+        cp2.setModel("Iphone 18");
 
 
 
@@ -34,6 +36,17 @@ public class CellPhoneApplication {
         System.out.println("Phone Number: " + cp1.getPhoneNumber());
         System.out.println("Owner: " + cp1.getOwner());
 
-        cp1.dial("532-486-5932");
+
+        cp1.dial(cp2.getPhoneNumber());
+        cp2.dial(cp1.getPhoneNumber());
+        display(cp1);
+        display(cp2);
+
+    }
+
+    public static void display(CellPhone phone){
+        System.out.println("\nOwner: " + phone.getOwner());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Phone number: " + phone.getPhoneNumber());
     }
 }
